@@ -1,0 +1,30 @@
+users:
+  - name: yc-user
+    groups: sudo
+    shell: /bin/bash
+    sudo: 'ALL=(ALL) NOPASSWD:ALL'
+    ssh_authorized_keys:
+      - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl appuser"
+
+package_update: true
+
+packages:
+  - ruby-full
+  - ruby-bundler
+  - build-essential
+  - mongodb
+  - git
+
+write_files:
+  - path: /home/yc-user/startup_script.sh
+    permissions: "755"
+    content: |
+        #!/bin/bash
+        sudo systemctl enable mongodb
+        sudo systemctl start mongodb
+        sudo git clone -b monolith https://github.com/express42/reddit.git
+        cd reddit && bundle install
+        puma -d
+
+runcmd:
+  - /home/yc-user/startup_script.sh
