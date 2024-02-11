@@ -1,8 +1,7 @@
 {
-    "folder_id": "j5gtccu1334999jghud7m",
+    "folder_id": "b1gk6************",
     "source_image_family": "ubuntu-1604-lts",
     "service_account_key_file": "key.json.example",
     "zone": "ru-central1-a",
-    "use_ipv4_nat": "true",
-    "subnet_id": "cl44gu6fm1"
+    "use_ipv4_nat": "true"
 }
