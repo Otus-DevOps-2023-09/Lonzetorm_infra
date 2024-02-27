@@ -6,3 +6,8 @@ packer/config.pkr.hcl
 *.tfstate.backup
 *.tfvars
 .terraform/
+
+.terraform.old/
+*.old
+*.OLD
+provider.tf

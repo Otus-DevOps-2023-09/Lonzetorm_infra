@@ -1,7 +1,15 @@
 {
-    "folder_id": "b1gk6************",
+    "key_file": "test.key.json",
+    "folder_id": "kj4h4kj3h54kj5h4kjh3",
+    "source_image_id": "jlkh435kj4h35jk3h45kj",
     "source_image_family": "ubuntu-1604-lts",
-    "service_account_key_file": "key.json.example",
-    "zone": "ru-central1-a",
-    "use_ipv4_nat": "true"
+    "image_name": "reddit-app-{{timestamp}}",
+    "image_family": "reddit-app",
+    "ssh_username": "ubuntu",
+    "use_ipv4_nat": "true",
+    "platform_id": "standard-v1",
+    "disk_size_gb": "10",
+    "instance_cores": "2",
+    "instance_mem_gb": "2",
+    "zone": "ru-central1-a"
 }

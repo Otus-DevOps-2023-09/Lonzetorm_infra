@@ -18,7 +18,7 @@ provider "yandex" {
 }
 
 module "app" {
-source          = "./modules/app"
+source          = "../modules/app"
 public_key_path = var.public_key_path
 subnet_id       = var.subnet_id
 folder_id       = var.folder_id
@@ -28,7 +28,7 @@ cloud_id        = var.cloud_id
 service_account_key_file = var.service_account_key_file
 }
 module "db" {
-source          = "./modules/db"
+source          = "../modules/db"
 public_key_path = var.public_key_path
 subnet_id       = var.subnet_id
 folder_id       = var.folder_id

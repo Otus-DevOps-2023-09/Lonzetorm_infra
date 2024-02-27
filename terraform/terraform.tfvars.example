@@ -6,4 +6,6 @@ public_key_path          = "/home/user/.ssh/id_ed25519pub"
 private_key_path         = "/home/user/.ssh/id_ed25519"
 subnet_id                = "fgjrkij54gj5ekl"
 service_account_key_file = "/home/user/key.json"
-instances_count          = 2
+instances_count          = 1
+app_disk_image           = "ee4atnk3t50s5hmiaqtl"
+db_disk_image            = "ee5u6ysgcuov3n36bcrt"
