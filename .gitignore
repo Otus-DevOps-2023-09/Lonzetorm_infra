@@ -11,3 +11,6 @@ packer/config.pkr.hcl
 *.old
 *.OLD
 provider.tf
+
+v_ansible/
+v1_ansible/
