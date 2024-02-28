@@ -1,0 +1,10 @@
+app:
+  hosts:
+    158.160.12.80:
+
+db:
+  hosts:
+    10.34.25.89:
+  vars:
+    ansible_ssh_common_args:
+      '-J ubuntu@158.160.12.80'

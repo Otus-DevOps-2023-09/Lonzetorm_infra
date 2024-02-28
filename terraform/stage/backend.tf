@@ -1,19 +1,14 @@
-
 terraform {
-
-backend "s3" {
-    endpoints = {
-      s3 = "https://storage.yandexcloud.net"
-    }
-    bucket          = "terraform.test"
-    region          = "ru-central1-a"
-    key             = "states/stage/terraform.tfstate"
-access_key         = "xxxxxxxxxxxxxxxxxxxxx"
-secret_key         = "xxxxxxxxxxxxxxxxxxxxx"
+  backend "s3" {
+    endpoint = "https://storage.yandexcloud.net"
+    bucket   = "backend-azarov"
+    region   = "ru-central1"
+    key      = "terraform.tfstate"
 
     skip_region_validation      = true
     skip_credentials_validation = true
-    skip_requesting_account_id  = true
 
+    dynamodb_endpoint = "https://docapi.serverless.yandexcloud.net/ru-central1/b1gfsjkfhrekjfvb4jb/freikfhrkckrfjkerf89"
+    dynamodb_table    = "backend-azarov-table"
   }
 }

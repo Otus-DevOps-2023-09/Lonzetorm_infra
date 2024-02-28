@@ -1,19 +1,30 @@
+#terraform {
+#  required_providers {
+#    yandex = {
+#      source = "yandex-cloud/yandex"
+#    }
+#  }
+#  required_version = ">= 0.13"
+#}
 provider "yandex" {
   service_account_key_file = var.service_account_key_file
-  cloud_id     = var.cloud_id
-  folder_id    = var.folder_id
-  zone         = var.zone
+  cloud_id                 = var.cloud_id
+  folder_id                = var.folder_id
+  zone                     = var.zone
 }
 
 resource "yandex_compute_instance" "db" {
-  name = "reddit-db"
+  name        = "reddit-db-${var.env}"
+  platform_id = "standard-v3"
+
   labels = {
-    tags = "reddit-db"
+    tags = "reddit-db-${var.env}"
   }
 
   resources {
-    cores  = 2
-    memory = 2
+    core_fraction = 50
+    cores         = 2
+    memory        = 2
   }
 
   boot_disk {
@@ -24,10 +35,9 @@ resource "yandex_compute_instance" "db" {
 
   network_interface {
     subnet_id = var.subnet_id
-    nat       = true
   }
 
-  metadata = {
-  ssh-keys = "ubuntu:${file(var.public_key_path)}"
+ metadata = {
+    ssh-keys = "ubuntu:${file(var.public_key_path)}"
   }
 }
