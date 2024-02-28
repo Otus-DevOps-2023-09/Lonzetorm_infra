@@ -7,6 +7,10 @@
 #  required_version = ">= 0.13"
 #}
 
+env = "4j34hkj34h5kj4"
+db_ip_address = "43.54.56.78"
+private_key_path = "/key.json"
+
 resource "yandex_compute_instance" "app" {
   name        = "reddit-app-${var.env}"
   platform_id = "standard-v3"
