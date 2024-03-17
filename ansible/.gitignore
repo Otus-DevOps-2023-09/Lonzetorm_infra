@@ -1,0 +1,17 @@
+v_ansible/
+v1_ansible/
+*.old
+*.lock.hcl
+*.retry
+../terraform/files/
+../terraform/outputs.tf
+terraform/prod/.terraform.lock.hcl
+../terraform/prod/backend.tf
+../terraform/prod/outputs.tf
+terraform/stage/.terraform.lock.hcl
+../terraform/stage/backend.tf
+../terraform/stage/outputs.tf
+jdauphant.nginx
+/jdauphant.nginx/
+roles/jdauphant.nginx/
+vault.key

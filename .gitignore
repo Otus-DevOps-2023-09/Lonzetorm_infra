@@ -1,16 +1,24 @@
-packer/variables.json
-packer/config.pkr.hcl
-
+variables.json
 *.tfstate
 *.tfstate.*.backup
 *.tfstate.backup
 *.tfvars
 .terraform/
-
-.terraform.old/
-*.old
-*.OLD
-provider.tf
-
-v_ansible/
-v1_ansible/
+main1.tf
+terraform.tfvars
+main.tf.save
+<<<<<<< HEAD
+*.backup
+/\n\Z/
+=======
+*.retry
+#>>>>>>> ansible-1
+# Vagrant & molecule
+.vagrant/
+*.log
+*.pyc
+.molecule
+.cache
+.pytest_cache
+vault.key
+jdauphant.nginx

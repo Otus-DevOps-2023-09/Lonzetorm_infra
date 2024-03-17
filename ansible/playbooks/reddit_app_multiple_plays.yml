@@ -4,17 +4,17 @@
   tags: db-tag
   become: true
   vars:
-      mongo_bind_ip: 0.0.0.0
+      mongo_bind_ip: 0.0.0.0 # <-- Переменная задается в блоке vars
 
   tasks:
     - name: Change mongo config file
       template:
-        src: templates/mongod.conf.j2
-        dest: /etc/mongod.conf
-        mode: 0644
+        src: templates/mongod.conf.j2 # <-- Путь до локального файла-шаблона
+        dest: /etc/mongod.conf # <-- Путь на удаленном хосте
+        mode: 0644 # <-- Права на файл, которые нужно установить
       notify: restart mongod
 
-  handlers:
+  handlers: # <-- Добавим блок handlers и задачу
     - name: restart mongod
       service: name=mongod state=restarted
 
@@ -41,7 +41,7 @@
     - name: Enable puma
       systemd: name=puma enabled=yes
 
-  handlers:
+  handlers: # <-- Добавим блок handlers и задачу
     - name: reload puma
       systemd: name=puma state=restarted
 
