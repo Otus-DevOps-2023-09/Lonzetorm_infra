@@ -1,0 +1,24 @@
+variables.json
+*.tfstate
+*.tfstate.*.backup
+*.tfstate.backup
+*.tfvars
+.terraform/
+main1.tf
+terraform.tfvars
+main.tf.save
+<<<<<<< HEAD
+*.backup
+/\n\Z/
+=======
+*.retry
+#>>>>>>> ansible-1
+# Vagrant & molecule
+.vagrant/
+*.log
+*.pyc
+.molecule
+.cache
+.pytest_cache
+vault.key
+jdauphant.nginx
