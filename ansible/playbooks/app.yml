@@ -1,10 +1,10 @@
 ---
 - name: Configure App
   hosts: app
- # tags: app-tag
   become: true
- # vars:
-  #    db_host: 10.128.0.26
+
+  vars:
+   db_host: "{{ hostvars[groups['db'][0]]['inventory_hostname'] if groups['db'] is defined else hostvars[inventory_hostname]['db_host'] }}"
 
   roles:
     - app
