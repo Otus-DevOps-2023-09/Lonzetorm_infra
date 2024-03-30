@@ -1,0 +1,17 @@
+REPOSITORY                                               TAG                                           IMAGE ID       CREATED          SIZE
+Lonzetorm/ubuntu-tmp-file                                latest                                        1f59ffbce3a4   50 seconds ago   67.8MB
+test2                                                    latest                                        a9c78a6d13d1   3 hours ago      195MB
+test                                                     latest                                        b455ede0a980   40 hours ago     238MB
+<none>                                                   <none>                                        fc862f8444210  8 days ago       205MB
+<none>                                                   <none>                                        5878ff8f2778   8 days ago       112MB
+ubuntu                                                   latest                                        174c8c234b2a   8 days ago       77.8MB
+hw_docker                                                latest                                        e56b8896d4w2   9 days ago       267MB
+
+------
+$ docker inspect <u_container_id>
+$ docker inspect <u_image_id>
+
+На основе вывода команд объясните чем отличается контейнер от образа.
+
+Контейнер Docker – это автономное запускаемое программное приложение или сервис.
+С другой стороны, образ Docker – это шаблон, загруженный в контейнер для его запуска, например набор инструкций.
