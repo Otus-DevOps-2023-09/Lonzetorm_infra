@@ -1,0 +1,8 @@
+REPOSITORY                                               TAG                                           IMAGE ID       CREATED          SIZE
+c0zak/ubuntu-tmp-file                                    latest                                        4m3n4fbce34n   10 seconds ago   77.8MB
+test2                                                    latest                                        3mmn34mm33d6   8 hours ago      197MB
+
+
+------
+$ docker inspect <u_container_id>
+$ docker inspect <u_image_id>
